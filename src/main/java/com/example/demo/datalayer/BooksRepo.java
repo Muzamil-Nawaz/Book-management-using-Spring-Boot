@@ -1,9 +1,12 @@
 package com.example.demo.datalayer;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
 import com.example.demo.apilayer.Book;
 
 
-public interface BooksRepo extends CrudRepository<Book,Integer>{
+@Repository
+public interface BooksRepo extends JpaRepository<Book,Long>{
 
 }

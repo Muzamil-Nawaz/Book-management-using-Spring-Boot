@@ -12,16 +12,22 @@ public class Book {
 	
 
 	@Id
-	private int bId;
+	private long bId;
 	private String bName;
 	private String bAuthor;
+	private int price;
 	
-	
-	public int getbId() {
+	public long getbId() {
 		return bId;
 	}
-	public void setbId(int bId) {
+	public void setbId(long bId) {
 		this.bId = bId;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
 	}
 	public String getBookName() {
 		return bName;
