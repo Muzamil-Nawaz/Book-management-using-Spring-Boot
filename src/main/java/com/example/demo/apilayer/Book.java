@@ -3,10 +3,13 @@ package com.example.demo.apilayer;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import org.springframework.stereotype.Component;
 
+
+
+
+//Model class for Book entity with all required attributes directly
+//mapped with books table in database
 @Entity
-@Component
 public class Book {
 
 	

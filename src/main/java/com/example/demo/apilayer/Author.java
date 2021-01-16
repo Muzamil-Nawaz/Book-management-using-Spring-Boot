@@ -3,6 +3,9 @@ package com.example.demo.apilayer;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+
+// Model class for Author entity with all required attributes directly
+//mapped with authors table in database
 @Entity
 public class Author {
 	

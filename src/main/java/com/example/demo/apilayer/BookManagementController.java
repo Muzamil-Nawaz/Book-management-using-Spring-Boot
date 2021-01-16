@@ -21,23 +21,30 @@ public class BookManagementController {
 	BookManagementService bookmanagementservice;
 	
 	
+	
+	// Mapping get request to base url for getting books records which is redirected to the Service layer
 	@GetMapping
 	public List<Book> getBooks(){
 		
 		return bookmanagementservice.getBooks();
 	}
 	
+	
+	// Mapping post request to base url for adding book and forwarding data to Service layer 
 	@PostMapping
 	public List<Book> addBook(@RequestBody Book book){
 		
 		return List.of(bookmanagementservice.addBook(book));
 	}
 	
+	// Mapping delete url to base url for deleting book and forwarding request to service layer
 	@DeleteMapping
 	public String deleteBook(@RequestParam("id") Long id) {
 		return (bookmanagementservice.deleteBook(id));
 	}
 	
+	
+	// Mapping put request to base url for updating book and forwarding it to service layer
 	@PutMapping
 	public List<Book> updateBook(@RequestBody Book book){
 		System.out.print(book);
@@ -45,20 +52,29 @@ public class BookManagementController {
 	}
 	
 	
+	// Mapping get request to base url for getting authors records which is redirected to the Service layer
 	@GetMapping("/authors")
 	public List<Author> getAuthors(){
 		return (bookmanagementservice.getAuthors());
 	}
 	
+	
+	// Mapping post request to base url for adding author and forwarding data to Service layer 
 	@PostMapping("/authors")
 	public List<Author> addAuthor(@RequestBody Author author){
 		return bookmanagementservice.addAuthor(author);
 	}
+	
+	
+	// Mapping delete request to base url for deleting author and forwarding data to Service layer 
 	@DeleteMapping("/authors")
 	public String deleteAuthor(@RequestParam("id") Long id) {
 		return (bookmanagementservice.deleteAuthor(id));
 	}
 	
+	
+	
+	// Mapping put request to base url for updating author and forwarding it to service layer
 	@PutMapping("/authors")
 	public List<Author> updateAuthor(@RequestBody Author author){
 		return List.of(bookmanagementservice.updateAuthor(author));
