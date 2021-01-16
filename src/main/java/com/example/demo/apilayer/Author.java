@@ -28,5 +28,9 @@ public class Author {
 	public void setPublishedBooks(int publishedBooks) {
 		this.publishedBooks = publishedBooks;
 	}
+	@Override
+	public String toString() {
+		return "Author [aid=" + aid + ", name=" + name + ", publishedBooks=" + publishedBooks + "]";
+	}
 	
 }

@@ -40,6 +40,14 @@ public class BookManagementService {
 			return "Book does not exist with id "+id;
 		}
 	}	
+	
+	public Book updateBook(Book book) {
+		if(booksrepo.existsById(book.getbId()))
+			return booksrepo.save(book);
+		else
+			throw new IllegalStateException("No Book exists with Id "+book.getbId());
+	}
+	
 	public List<Author> getAuthors(){
 		return authorsrepo.findAll();
 	}
@@ -58,6 +66,13 @@ public class BookManagementService {
 		else {
 			return "Author does not exist with id "+id;
 		}
+	}
+	
+	public Author updateAuthor(Author author) {
+		if(authorsrepo.existsById(author.getAid()))
+			return authorsrepo.save(author);
+		else
+			throw new IllegalStateException("No Author exists with Id "+author.getAid());
 	}
 	
 }

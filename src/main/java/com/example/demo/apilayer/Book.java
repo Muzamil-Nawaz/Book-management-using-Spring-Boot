@@ -17,6 +17,7 @@ public class Book {
 	private String bAuthor;
 	private int price;
 	
+
 	public long getbId() {
 		return bId;
 	}
@@ -40,6 +41,10 @@ public class Book {
 	}
 	public void setbAuthor(String bookAuthor) {
 		this.bAuthor = bookAuthor;
+	}
+	@Override
+	public String toString() {
+		return "Book [bId=" + bId + ", bName=" + bName + ", bAuthor=" + bAuthor + ", price=" + price + "]";
 	}
 	
 }
