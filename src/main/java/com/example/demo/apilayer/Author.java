@@ -13,6 +13,13 @@ public class Author {
 	private long aid;
 	private String name;
 	private int publishedBooks;
+	private String imgUrl;
+	public String getImgUrl() {
+		return imgUrl;
+	}
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
+	}
 	public long getAid() {
 		return aid;
 	}

@@ -19,8 +19,16 @@ public class Book {
 	private String bName;
 	private String bAuthor;
 	private int price;
+	private String imgUrl;
 	
 
+	
+	public String getImgUrl() {
+		return imgUrl;
+	}
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
+	}
 	public long getbId() {
 		return bId;
 	}
